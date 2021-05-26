@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "医来顺",
+  "usingComponents": {
+    "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
+    "my-search": "/components/search/index",
+    "my-recommend": "/components/recommend/index",
+    "u-back-top": "/uview-ui/components/u-back-top/u-back-top"
+  }
+}

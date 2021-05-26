@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.index .banner.data-v-812500c0 {
+  padding: 0 30rpx;
+}
+.index .banner image.data-v-812500c0 {
+  width: 100%;
+  height: 100%;
+}
+.index .banner .explain.data-v-812500c0 {
+  height: 71rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 22rpx;
+  color: #153F88;
+}
+.index .banner .explain > view.data-v-812500c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.index .banner .explain .iconfont.data-v-812500c0 {
+  font-size: 40rpx;
+  margin-right: 10rpx;
+}
+.index .nav.data-v-812500c0 {
+  background: white;
+  padding: 40rpx 30rpx;
+  margin: 16rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.index .nav image.data-v-812500c0 {
+  width: 79rpx;
+  height: 79rpx;
+  border-radius: 50%;
+}
+.index .hot-new.data-v-812500c0 {
+  height: 102rpx;
+  background: white;
+  padding: 20rpx 30rpx;
+}
+.index .hot-new swiper.data-v-812500c0 {
+  height: 100%;
+  width: 90%;
+}
+.index .new.data-v-812500c0 {
+  margin-top: 16rpx;
+  background: white;
+  padding-left: 30rpx;
+}
+.index .new .title.data-v-812500c0 {
+  height: 94rpx;
+  padding-right: 30rpx;
+  font-size: 34rpx;
+  font-family: jiangxizhuokai-Regular;
+}
+.index .new .new-product.data-v-812500c0 {
+  width: 8rpx;
+  height: 32rpx;
+  border-radius: 4rpx;
+  background: #386FF0;
+  margin-right: 9rpx;
+}
+.index .new .good.data-v-812500c0::-webkit-scrollbar {
+  width: 0 !important;
+}
+.index .new .good.data-v-812500c0 {
+  overflow: scroll;
+  background: #D9E4FF;
+  padding: 20rpx 0 20rpx 20rpx;
+  border-radius: 10rpx 0 0 10rpx;
+}
+.index .new .good > view.data-v-812500c0 {
+  margin-right: 20rpx;
+}
+.index .new .good.data-v-812500c0 .recommend image {
+  width: 260rpx;
+  height: 210rpx;
+}
+.index .hot-sale.data-v-812500c0 {
+  padding: 0 30rpx;
+}
+.index .hot-sale .name.data-v-812500c0 {
+  height: 92rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.index .hot-sale .name text.data-v-812500c0 {
+  display: inline-block;
+  width: 40rpx;
+  height: 8rpx;
+  margin-top: 4rpx;
+  background: -webkit-linear-gradient(left, #386FF0, #ADC6FF);
+  background: linear-gradient(to right, #386FF0, #ADC6FF);
+  border-radius: 4rpx;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.index .hot-sale .name .orange.data-v-812500c0 {
+  background: -webkit-linear-gradient(left, #F07538, #FFC1A2);
+  background: linear-gradient(to right, #F07538, #FFC1A2);
+  margin-left: -18rpx;
+}
+.index .hot-sale .hot-goods.data-v-812500c0 {
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.index .hot-sale .hot-goods > view.data-v-812500c0 {
+  width: 330rpx;
+  margin-bottom: 30rpx;
+}
+.index .enterprise.data-v-812500c0 {
+  color: #153F88;
+  text-align: center;
+  margin-bottom: 24rpx;
+}
+.index .enterprise > view.data-v-812500c0 {
+  margin-top: 12rpx;
+}
+

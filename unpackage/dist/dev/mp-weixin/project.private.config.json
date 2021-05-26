@@ -1,0 +1,54 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/index/search",
+          "pathName": "pages/index/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tabar/index",
+          "pathName": "pages/tabar/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/newList",
+          "pathName": "pages/index/newList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tabar/classify",
+          "pathName": "pages/tabar/classify",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/classify/enterClassify",
+          "pathName": "pages/classify/enterClassify",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/shopdetail",
+          "pathName": "pages/index/shopdetail",
+          "query": "id=51",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

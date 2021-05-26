@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "搜索",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
+    "my-recommend": "/components/recommend/index",
+    "my-article": "/components/article/index"
+  }
+}

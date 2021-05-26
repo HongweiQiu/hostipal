@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/tabar/index",
+    "pages/tabar/classify",
+    "pages/tabar/shopcart",
+    "pages/tabar/user"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/index",
+      "pages": [
+        "search",
+        "newList",
+        "aboutUs",
+        "onlineAsk",
+        "newDetail",
+        "shopdetail"
+      ]
+    },
+    {
+      "root": "pages/classify",
+      "pages": [
+        "enterClassify"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "医来顺",
+    "navigationBarBackgroundColor": "#386FF0",
+    "backgroundColor": "#386FF0"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#386FF0",
+    "list": [
+      {
+        "pagePath": "pages/tabar/index",
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabar/classify",
+        "iconPath": "static/img/classify.png",
+        "selectedIconPath": "static/img/classify_active.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/tabar/shopcart",
+        "iconPath": "static/img/shopcart.png",
+        "selectedIconPath": "static/img/shopcart_active.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/tabar/user",
+        "iconPath": "static/img/user.png",
+        "selectedIconPath": "static/img/user_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

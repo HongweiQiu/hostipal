@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
+    "my-recommend": "/components/recommend/index",
+    "u-popup": "/uview-ui/components/u-popup/u-popup",
+    "my-addcart": "/components/addcart/index"
+  }
+}
