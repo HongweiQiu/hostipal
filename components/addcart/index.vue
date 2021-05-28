@@ -28,7 +28,7 @@
 			</view>
 			<view>
 				<text class="add-shop">加入购物车</text>
-				<text class="now-buy">立刻购买</text>
+				<text class="now-buy" @click="$doubleClick(nowBuy)">立刻购买</text>
 			</view>
 		</view>
 	</view>
@@ -44,6 +44,11 @@
 		methods: {
 			close() {
 				this.$emit('close')
+			},
+			nowBuy(){
+				uni.navigateTo({
+					url:"/pages/shopcart/shoplist"
+				})
 			}
 		}
 	}

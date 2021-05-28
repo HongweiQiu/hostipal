@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "新闻动态",
+  "navigationBarBackgroundColor": "#386FF0",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
+    "u-tabs": "/uview-ui/components/u-tabs/u-tabs",
+    "my-article": "/components/article/index"
+  }
+}

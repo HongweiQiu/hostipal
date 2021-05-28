@@ -159,42 +159,44 @@
 			<my-addcart :ware="ware" @close="showCart=false"></my-addcart>
 		</u-popup>
 		<u-popup mode="bottom" v-model="showParams" border-radius="20">
-		<view style="padding: 30rpx 0 0;" class="center fs-17">产品参数</view>
-		<view class="product-info">
-			<view>
-				<text>品牌</text>
-				<text>振德</text>
+			<view style="padding: 30rpx 0 0;" class="center fs-17">产品参数</view>
+			<view class="product-info">
+				<view>
+					<text>品牌</text>
+					<text>振德</text>
+				</view>
+				<view>
+					<text>型号</text>
+					<text>无</text>
+				</view>
+				<view>
+					<text>包装</text>
+					<text>50个/盒</text>
+				</view>
+				<view>
+					<text>材质</text>
+					<text>南昌</text>
+				</view>
+				<view>
+					<text>产地</text>
+					<text>南昌</text>
+				</view>
+				<view>
+					<text>存储条件</text>
+					<text>避光</text>
+				</view>
+				<view>
+					<text>生产厂家</text>
+					<text>南昌市医来顺供应链</text>
+				</view>
+				<view>
+					<text>执行标准</text>
+					<text>4567782331</text>
+				</view>
 			</view>
-			<view>
-				<text>型号</text>
-				<text>无</text>
+			<view class="look-deterMine">
+				<text>确定</text>
 			</view>
-			<view>
-				<text>包装</text>
-				<text>50个/盒</text>
-			</view>
-			<view>
-				<text>材质</text>
-				<text>南昌</text>
-			</view>
-			<view>
-				<text>产地</text>
-				<text>南昌</text>
-			</view>
-			<view>
-				<text>存储条件</text>
-				<text>避光</text>
-			</view>
-			<view>
-				<text>生产厂家</text>
-				<text>南昌市医来顺供应链</text>
-			</view>
-			<view>
-				<text>执行标准</text>
-				<text>4567782331</text>
-			</view>
-		</view>
-		<view class="look-deterMine">确定</view>
 		</u-popup>
 
 		<l-painter :board="base" ref="painter" v-show="false" />
@@ -212,7 +214,7 @@
 		},
 		data() {
 			return {
-				showParams:false,
+				showParams: false,
 				showCart: false,
 				maskShow: true,
 				showcart: false,
@@ -730,20 +732,38 @@
 		background: #57B127;
 		border-radius: 37rpx;
 	}
-	.product-info{
-			margin:0 30rpx;
-		&>view{
+
+	.product-info {
+		margin: 0 30rpx;
+
+		&>view {
 			height: 88rpx;
 			line-height: 88rpx;
 			border-bottom: 1px solid #eee;
-		
-			text:first-child{
+
+			text:first-child {
 				display: inline-block;
 				width: 182rpx;
 			}
 		}
-		.look-deterMine{
-			width:690rpx;height: 79rpx;
+
+	}
+
+	.look-deterMine {
+		margin-top:5rpx;
+		border-top: 1px solid #eee;
+		text {
+			width: 690rpx;
+			height: 79rpx;
+			display: block;
+			line-height: 79rpx;
+			background: #386FF0;
+			color: white;
+			text-align: center;
+			border-radius: 39rpx;
+			
+			margin: 10rpx auto;
 		}
+
 	}
 </style>

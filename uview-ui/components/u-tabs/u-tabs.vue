@@ -84,7 +84,7 @@
 			// 选中项的主题颜色
 			activeColor: {
 				type: String,
-				default: '#2979ff'
+				default: '#386FF0'
 			},
 			// 未选中项的颜色
 			inactiveColor: {
@@ -131,7 +131,7 @@
 			// 活动tab字体是否加粗
 			bold: {
 				type: Boolean,
-				default: true
+				default: false
 			},
 			// 当前活动tab item的样式
 			activeItemStyle: {
@@ -204,7 +204,8 @@
 					height: this.barHeight + 'rpx',
 					opacity: this.barFirstTimeMove ? 0 : 1,
 					// 设置一个很大的值，它会自动取能用的最大值，不用高度的一半，是因为高度可能是单数，会有小数出现
-					'border-radius': `${this.barHeight / 2}px`
+					// 'border-radius': `${this.barHeight / 2}px`
+					'border-radius': `6rpx`
 				};
 				Object.assign(style, this.barStyle);
 				return style;

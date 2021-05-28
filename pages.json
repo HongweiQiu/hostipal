@@ -13,7 +13,8 @@
 		{
 			"path": "pages/tabar/shopcart",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white"
 			}
 		},
 		{
@@ -26,7 +27,7 @@
 	"subPackages": [{
 			"root": "pages/index",
 			"pages": [
-				
+
 				{
 					"path": "search",
 					"style": {
@@ -77,13 +78,106 @@
 				}
 			]
 		}, {
+			"root": "pages/shopcart",
+			"pages": [{
+				"path": "shoplist"
+
+			}, {
+				"path": "selectAddress",
+				"style": {
+					"navigationBarTitleText": "选择地址",
+					"navigationBarBackgroundColor": "#fff",
+					"navigationBarTextStyle": "black"
+				}
+			}]
+		},
+		{
 			"root": "pages/classify",
 			"pages": [{
 				"path": "enterClassify"
 
 			}]
+		},
+		{
+			"root": "pages/order",
+			"pages": [{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "全部订单",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "orderdetail",
+					"style": {
+						"navigationBarTitleText": "订单详情",
+						"navigationBarBackgroundColor": "#386FF0",
+						"navigationBarTextStyle": "white"
+					}
+				},
+				{
+					"path": "evaluate",
+					"style": {
+						"navigationBarTitleText": "评价",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "afterSaleList",
+					"style": {
+						"navigationBarTitleText": "售后订单",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "applyAfterSale",
+					"style": {
+						"navigationBarTitleText": "订单售后",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/account",
+			"pages": [{
+					"path": "login",
+					"style": {
+						"navigationBarTitleText": "登录",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "register",
+					"style": {
+						"navigationBarTitleText": "注册",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "treaty",
+					"style": {
+						"navigationBarTitleText": "用户协议",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "forget",
+					"style": {
+						"navigationBarTitleText": "忘记密码",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				}
+			]
 		}
-
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -116,7 +210,6 @@
 				"iconPath": "static/img/user.png",
 				"selectedIconPath": "static/img/user_active.png",
 				"text": "我的"
-
 			}
 		]
 	},

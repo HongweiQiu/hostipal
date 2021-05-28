@@ -265,8 +265,19 @@
   display: inline-block;
   width: 182rpx;
 }
-.product-info .look-deterMine.data-v-0e3bfe9d {
+.look-deterMine.data-v-0e3bfe9d {
+  margin-top: 5rpx;
+  border-top: 1px solid #eee;
+}
+.look-deterMine text.data-v-0e3bfe9d {
   width: 690rpx;
   height: 79rpx;
+  display: block;
+  line-height: 79rpx;
+  background: #386FF0;
+  color: white;
+  text-align: center;
+  border-radius: 39rpx;
+  margin: 10rpx auto;
 }
 

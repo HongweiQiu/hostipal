@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "注册",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "my-identifyingcode": "/components/identifyingcode/index",
+    "u-checkbox": "/uview-ui/components/u-checkbox/u-checkbox"
+  }
+}

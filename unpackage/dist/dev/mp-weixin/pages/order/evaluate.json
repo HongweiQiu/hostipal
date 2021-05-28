@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "评价",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "my-orderproduct": "/components/orderproduct/index",
+    "u-rate": "/uview-ui/components/u-rate/u-rate",
+    "u-upload": "/uview-ui/components/u-upload/u-upload"
+  }
+}

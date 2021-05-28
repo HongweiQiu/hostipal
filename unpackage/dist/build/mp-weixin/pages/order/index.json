@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "全部订单",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
+    "u-subsection": "/uview-ui/components/u-subsection/u-subsection",
+    "u-tabs": "/uview-ui/components/u-tabs/u-tabs",
+    "my-orderproduct": "/components/orderproduct/index",
+    "u-popup": "/uview-ui/components/u-popup/u-popup"
+  }
+}

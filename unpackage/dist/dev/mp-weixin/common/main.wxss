@@ -88,6 +88,9 @@
 .red-font {
 	color: #F20000;
 }
+.blue-font {
+	color: #386FF0;
+}
 /* 背景颜色 */
 .gray-back {
 	background: #eee;
@@ -113,15 +116,33 @@
 	-webkit-transform: rotate(180deg);
 	        transform: rotate(180deg);
 }
+.right{
+	text-align: right;
+}
 button {
 	border: none;
 	background: none;
 	line-height: initial;
 	padding: 0;
 	margin: 0;
+	font-size: 30rpx;
 }
 button:after {
 	border: none;
+}
+.border {
+	border-bottom: 1px solid #eee;
+}
+.pay-button {
+	width: 184rpx;
+	height: 79rpx;
+	border-radius: 39rpx;
+	line-height: 79rpx;
+	text-align: center;
+}
+.place_style {
+	font-size: 30rpx;
+	color: #999;
 }
 @font-face {
   font-family: 'iconfont';  /* Project id 2533749 */
@@ -3602,5 +3623,23 @@ page {
   height: 0 !important;
   -webkit-appearance: none;
   background: transparent;
+}
+.c-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  color: white;
+  border-radius: 39rpx;
+  margin: 0 auto;
+  background: #386FF0;
+  height: 78rpx;
+  width: 690rpx;
+  margin: 0 auto;
 }
 

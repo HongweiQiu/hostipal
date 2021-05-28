@@ -1,0 +1,127 @@
+* {
+	padding: 0;
+	margin: 0
+}
+
+/* 字体 */
+.fs-11 {
+	font-size: 22rpx;
+}
+
+.fs-12 {
+	font-size: 24rpx;
+}
+
+.fs-13 {
+	font-size: 26rpx;
+}
+
+.fs-17 {
+	font-size: 34rpx;
+}
+
+.fs-18 {
+	font-size: 36rpx;
+}
+
+.fs-23 {
+	font-size: 46rpx;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* flex布局 */
+.flex {
+	display: flex;
+}
+
+.flex-left-right {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/* 字体颜色 */
+.gray-font {
+	color: #999;
+}
+
+.red-font {
+	color: #F20000;
+}
+
+.blue-font {
+	color: #386FF0;
+}
+
+/* 背景颜色 */
+.gray-back {
+	background: #eee;
+}
+
+.white-back {
+	background: white;
+}
+
+/* 弧度	 */
+.r-15 {
+	border-radius: 30rpx;
+}
+
+.r-5 {
+	border-radius: 10rpx;
+}
+
+/* 内边距 */
+.padding-15 {
+	padding: 0 30rpx;
+}
+
+.center {
+	text-align: center;
+}
+
+.t-180 {
+	transform: rotate(180deg);
+}
+
+button {
+	border: none;
+	background: none;
+	line-height: initial;
+	padding: 0;
+	margin: 0;
+}
+
+button:after {
+	border: none;
+}
+
+.border {
+	border-bottom: 1px solid #eee;
+}
+
+.pay-button {
+	width: 184rpx;
+	height: 79rpx;
+	border-radius: 39rpx;
+	line-height: 79rpx;
+	text-align: center;
+}
+
+.place_style {
+	font-size: 30rpx;
+	color: #999;
+}

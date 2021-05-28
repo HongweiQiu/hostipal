@@ -18,9 +18,35 @@
       ]
     },
     {
+      "root": "pages/shopcart",
+      "pages": [
+        "shoplist",
+        "selectAddress"
+      ]
+    },
+    {
       "root": "pages/classify",
       "pages": [
         "enterClassify"
+      ]
+    },
+    {
+      "root": "pages/order",
+      "pages": [
+        "index",
+        "orderdetail",
+        "evaluate",
+        "afterSaleList",
+        "applyAfterSale"
+      ]
+    },
+    {
+      "root": "pages/account",
+      "pages": [
+        "login",
+        "register",
+        "treaty",
+        "forget"
       ]
     }
   ],

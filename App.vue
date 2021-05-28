@@ -21,11 +21,25 @@
 		background: #F8F8F8;
 		font-size: 30rpx;
 	}
-	::-webkit-scrollbar {  
-	    display: none;  
-	    width: 0 !important;  
-	    height: 0 !important;  
-	    -webkit-appearance: none;  
-	    background: transparent;  
+
+	::-webkit-scrollbar {
+		display: none;
+		width: 0 !important;
+		height: 0 !important;
+		-webkit-appearance: none;
+		background: transparent;
+	}
+
+	.c-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		border-radius: 39rpx;
+		margin: 0 auto;
+		background: #386FF0;
+		height: 78rpx;
+		width: 690rpx;
+		margin: 0 auto;
 	}
 </style>
