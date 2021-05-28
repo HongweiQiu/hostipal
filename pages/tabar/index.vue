@@ -37,15 +37,14 @@
 		</view>
 		<view class="hot-new flex" @click="newPage">
 			<view>
-				<view>新闻</view>
-				<view>头条</view>
+				<image src="../../static/img/new_top.png" mode=""></image>
 			</view>
-			<swiper class="swiper" autoplay="true" duration="5000" circular="true" vertical="true" interval="5000">
-				<swiper-item v-for="(item, index) in 1" :key="index">
-					<view>岁的法国但是</view>
-					<view>岁的法国但是</view>
-
-				</swiper-item>
+			<scroll-view scroll-y="true" :scroll-top="scrollTop" @scrolltolower="test">
+				<view>撒打发第三方收到</view>
+				<view>撒打发第三方收到</view>
+				<view>撒打发第三方收到</view>
+				<view>撒打发第三方收到</view>
+			</scroll-view>
 			</swiper>
 		</view>
 		<!-- 新品推荐 -->
@@ -114,34 +113,50 @@
 			return {
 				imgRemote: imgRemote,
 				adList: [],
-				navList: [
-					{name:'关于我们',url:'aboutUs'},
-					{name:'商品分类',url:'classify'},
-					{name:'行业资讯',url:'newList'},
-					{name:'在线咨询',url:'onlineAsk'},
-					{name:'注册/登录',url:'login'},
-					
-					
+				navList: [{
+						name: '关于我们',
+						url: 'aboutUs'
+					},
+					{
+						name: '商品分类',
+						url: 'classify'
+					},
+					{
+						name: '行业资讯',
+						url: 'newList'
+					},
+					{
+						name: '在线咨询',
+						url: 'onlineAsk'
+					},
+					{
+						name: '注册/登录',
+						url: 'login'
+					},
+
+
 				],
 				scrollTop: 0,
 				list: [{}]
 			}
 		},
 		methods: {
-			navUrl(item){
+			navUrl(item) {
 				console.log(item)
-				let {url}=item;
-				if(/aboutUs|newList|onlineAsk/.test(url)){
+				let {
+					url
+				} = item;
+				if (/aboutUs|newList|onlineAsk/.test(url)) {
 					uni.navigateTo({
-						url:'/pages/index/'+url
+						url: '/pages/index/' + url
 					});
 				}
-				if(url=='classify'){
+				if (url == 'classify') {
 					uni.switchTab({
-						url:'/pages/tabar/'+url
+						url: '/pages/tabar/' + url
 					});
 				}
-				if(url=='login'){
+				if (url == 'login') {
 					this.$showModal('登录？')
 				}
 			},
@@ -155,7 +170,7 @@
 					}
 				})
 			},
-		
+
 			searchPage(val) {
 				uni.navigateTo({
 					url: '../index/search?type=' + val
@@ -165,11 +180,17 @@
 				uni.navigateTo({
 					url: '../index/newList'
 				})
+			},
+			test(e){
+				console.log(e)
 			}
 		},
 		onLoad() {
-			
+
 			this.indexMainAd();
+			setInterval(() => {
+				this.scrollTop++
+			}, 100)
 		},
 		onPageScroll(e) {
 			this.scrollTop = e.scrollTop;
@@ -223,6 +244,11 @@
 		}
 
 		.hot-new {
+			image {
+				width: 60rpx;
+				height: 60rpx;
+			}
+
 			height: 102rpx;
 			background: white;
 			padding: 20rpx 30rpx;

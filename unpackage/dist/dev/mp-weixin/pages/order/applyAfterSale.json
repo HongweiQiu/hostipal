@@ -6,7 +6,6 @@
     "u-checkbox": "/uview-ui/components/u-checkbox/u-checkbox",
     "u-checkbox-group": "/uview-ui/components/u-checkbox-group/u-checkbox-group",
     "my-orderproduct": "/components/orderproduct/index",
-    "u-upload": "/uview-ui/components/u-upload/u-upload",
     "u-popup": "/uview-ui/components/u-popup/u-popup"
   }
 }

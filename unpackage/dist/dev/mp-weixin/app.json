@@ -20,8 +20,16 @@
     {
       "root": "pages/shopcart",
       "pages": [
-        "shoplist",
-        "selectAddress"
+        "shoplist"
+      ]
+    },
+    {
+      "root": "pages/address",
+      "pages": [
+        "selectAddress",
+        "manage",
+        "add",
+        "edit"
       ]
     },
     {
@@ -37,7 +45,8 @@
         "orderdetail",
         "evaluate",
         "afterSaleList",
-        "applyAfterSale"
+        "applyAfterSale",
+        "afterSaleDetail"
       ]
     },
     {

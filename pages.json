@@ -82,14 +82,43 @@
 			"pages": [{
 				"path": "shoplist"
 
-			}, {
-				"path": "selectAddress",
-				"style": {
-					"navigationBarTitleText": "选择地址",
-					"navigationBarBackgroundColor": "#fff",
-					"navigationBarTextStyle": "black"
-				}
 			}]
+		},
+		{
+			"root": "pages/address",
+			"pages": [{
+					"path": "selectAddress",
+					"style": {
+						"navigationBarTitleText": "选择地址",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "manage",
+					"style": {
+						"navigationBarTitleText": "管理地址",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "add",
+					"style": {
+						"navigationBarTitleText": "添加地址",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "edit",
+					"style": {
+						"navigationBarTitleText": "编辑地址",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				}
+			]
 		},
 		{
 			"root": "pages/classify",
@@ -136,6 +165,14 @@
 					"path": "applyAfterSale",
 					"style": {
 						"navigationBarTitleText": "订单售后",
+						"navigationBarBackgroundColor": "#fff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "afterSaleDetail",
+					"style": {
+						"navigationBarTitleText": "订单详情",
 						"navigationBarBackgroundColor": "#fff",
 						"navigationBarTextStyle": "black"
 					}

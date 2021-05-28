@@ -1,40 +1,26 @@
 <template>
 	<view class="apply-return">
-		<view class="return-good">
+		<view class="return-good white-back r-10">
 			<view class="border padding-15 order-num align_center">
-				<text class="iconfont" :class="allCheck?'icondanxuanfuxuan':'iconico2'"
-					:style="{'color':allCheck?'#57B127':'#999'}" @click="allCheckGood"></text>
-				<text class="fs-13" style="margin-left: 20rpx;">订单编号：{{info.order_num}}</text>
+				<u-checkbox @change="allCheckGood" v-model="allCheck" name="1" shape="circle">
+					<text class="fs-13" style="margin-left: 20rpx;">订单编号：{{info.order_num}}</text>
+				</u-checkbox>
+
 			</view>
 			<view class="padding-15">
-				<view class="" v-for="(item,index) in info.goods" class="flex sign-good " :key="index">
-					<view class="align_center">
-						<text class="iconfont" :class="item.checked?'icondanxuanfuxuan':'iconico2'"
-							:style="{'color':item.checked?'#57B127':'#999'}" @click="selectCheck(index)"></text>
-					</view>
-					<view class="flex flex-full">
-						<view class="img">
-							<image :src="imgRemote+item.goods_img" mode="aspectFit" class="r-5"></image>
+				<u-checkbox-group @change="checkboxGroupChange">
+					<u-checkbox @change="checkboxChange" v-model="item.checked" v-for="(item, index) in 2" :key="index"
+						:name="item.name" shape="circle">
+						<view class="sign-order">
+							<my-orderproduct></my-orderproduct>
 						</view>
-						<view class="info flex-column flex-full ">
-							<view class="bold two-line">
-								{{item.goods_name}}
-							</view>
-							<view>
-								<text class="fs-11 gray_font">购买数量：</text>
-								<text class="fs-13 bold">{{item.buy_num}}</text>
-							</view>
-							<view>
-								<text class="fs-11 gray_font">退款总额：</text>
-								<text class="fs-13 bold red-font">￥{{$fixed(item.buy_num*item.market_price)}}</text>
-							</view>
-						</view>
-					</view>
-				</view>
+
+					</u-checkbox>
+				</u-checkbox-group>
 			</view>
 		</view>
-		<view class="explain" style="margin:30rpx;">
-			<view class="flex_left_right bold return-money border">
+		<view class="explain white-back r-10" style="margin:30rpx;">
+			<view class="flex-left-right bold return-money border">
 				<text>退款金额：</text>
 				<text class="red-font">￥{{totalPrice}}</text>
 			</view>
@@ -42,9 +28,9 @@
 				<text class="bold">退款说明：</text>
 				<textarea v-model="refund_desc" maxlength=50 placeholder="选填" />
 			</view>
-			<view class="right gray_font">{{refund_desc.length}}/50</view>
+			<view class="right gray-font">{{refund_desc.length}}/50</view>
 		</view>
-		<view>
+		<view class="white-back r-10">
 			<view class="bold" style="padding: 30rpx 0;">上传凭证：</view>
 			<view class="flex ">
 				<view v-for="(item,index) in file" :key="index">
@@ -52,24 +38,28 @@
 					</image>
 					<text class="delete-img" @click="file.splice(index,1)">x</text>
 				</view>
-				<view class="flex-column camera align_center" @click="showUpload('open')">
-					<text class="iconfont iconpaizhao"></text>
-					<text class="fs-11 gray_font">上传图片</text>
+				<view class="flex-column camera flex-center" @click="showWay=true">
+					<text class="iconfont icon-xiangji gray-font"></text>
+					<text class="fs-11 gray-font">上传图片</text>
 				</view>
 			</view>
 		</view>
-		<view class="submit" @click="submit"> 提交</view>
-		<uni-popup ref="popup" type="bottom">
+		<view style="height: 120rpx;"></view>
+		<view class="fixed">
+			<view class="submit" @click="submit"> 提交</view>
+		</view>
+
+		<u-popup mode="bottom" v-model="showWay">
 			<view class="upload-img">
-				<view class="white_b r-10">
+				<view class="white-back r-10">
 					<view class="border method" @click="chooseImage('album')">本地上传</view>
 					<view class="method" @click="chooseImage('camera')">拍照上传</view>
 				</view>
-				<view class="white_b method r-10 cancel" @click="showUpload('close')">
+				<view class="white-back method r-10 cancel" @click="showWay=false">
 					取消
 				</view>
 			</view>
-		</uni-popup>
+		</u-popup>
 	</view>
 </template>
 
@@ -77,7 +67,7 @@
 	export default {
 		data() {
 			return {
-
+				showWay: false,
 				info: [],
 				allCheck: true,
 				imgRemote: getApp().globalData.imgRemote,
@@ -88,14 +78,7 @@
 			}
 		},
 		methods: {
-			showUpload(way) {
-				if (way == 'open') {
-					this.$refs.popup.open();
-				} else {
-					this.$refs.popup.close();
-				}
 
-			},
 			chooseImage(type) {
 				let _ = this;
 				uni.chooseImage({
@@ -103,8 +86,7 @@
 					sourceType: [type], //从相册选择
 					success(res) {
 						let file = res.tempFilePaths;
-
-						_.$refs.popup.close();
+						_.showWay = false;
 						for (let i in file) {
 							uni.uploadFile({
 								url: getApp().globalData.rootUrl + _.$api.mainUpload, //此处换上你的接口地址
@@ -161,7 +143,7 @@
 				if (!newId) {
 					return this.$Toast('请选择退货商品')
 				}
-				this.$showModal('确认退货？',()=>{
+				this.$showModal('确认退货？', () => {
 					let params = {
 						token: uni.getStorageSync('userToken'),
 						order_id: this.id,
@@ -169,7 +151,7 @@
 						refund_desc: this.refund_desc,
 						refund_images: this.file.join(',')
 					};
-					
+
 					this.$get(this.$api.orderRefund, params, (res) => {
 						let {
 							data
@@ -182,13 +164,13 @@
 									url: 'orderAfterSale'
 								})
 							}, 1000)
-					
+
 						} else {
 							this.$Toast(data.msg)
 						}
 					})
 				})
-			
+
 			}
 		},
 		onLoad(e) {
@@ -222,8 +204,7 @@
 
 <style lang="scss" scoped>
 	.apply-return>view {
-		background-color: white;
-		border-radius: 10rpx;
+
 		margin: 0 30rpx;
 
 		&:nth-child(1) {
@@ -235,9 +216,7 @@
 			padding: 0 20rpx 30rpx;
 		}
 
-		&:nth-child(4) {
-			margin-bottom: 20rpx;
-		}
+
 
 	}
 
@@ -246,8 +225,27 @@
 			height: 60rpx;
 		}
 
-		.sign-good {
-			padding: 30rpx;
+
+		.sign-order {
+			padding: 30rpx 0 0 10rpx;
+
+			/deep/ .u-line-2 {
+				line-height: 1.2;
+			}
+
+			.attr {
+				margin: 10rpx 0 20rpx;
+			}
+
+			/deep/ .u-flex-1 {
+				padding-bottom: 20rpx;
+			}
+		}
+
+		u-checkbox:nth-last-child(n+2) {
+			/deep/ .u-flex-1 {
+				border-bottom: 1px solid #eee;
+			}
 		}
 
 		.return-good {
@@ -269,9 +267,7 @@
 				justify-content: space-between;
 			}
 
-			.sign-good:nth-last-child(2) .info {
-				border-bottom: 1px solid #eee;
-			}
+
 		}
 
 		.return-money {
@@ -284,7 +280,7 @@
 
 		textarea {
 			width: 450rpx;
-			height: 150rpx;
+			height: 80rpx;
 		}
 
 		.delete-img {
@@ -308,22 +304,27 @@
 
 			margin-right: 15rpx;
 			justify-content: center;
-			width:130rpx;
-			height:130rpx;
+			width:190rpx;
+			height:190rpx;
 			border: 1px dashed #eee;
 		}
 
 		.submit {
-			background: #57B127;
+			background: #386FF0;
 			color: white;
 			border-radius: 39rpx;
 			height: 78rpx;
 			line-height: 78rpx;
 			text-align: center;
-			margin-top: 21rpx;
+			margin:0 30rpx;
+		}
+
+		/deep/ .u-drawer-content {
+			background: none;
 		}
 
 		.upload-img {
+			// width: 690rpx;
 			margin: 0 30rpx;
 
 			.method {
@@ -335,6 +336,15 @@
 			.cancel {
 				margin: 30rpx 0;
 			}
+		}
+
+		.fixed {
+			padding: 10rpx 0;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			margin: 0;
+			background: white;
 		}
 	}
 </style>

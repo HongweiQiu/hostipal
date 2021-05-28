@@ -111,6 +111,19 @@
         {
           "name": "pages/order/apply",
           "pathName": "pages/order/applyAfterSale",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "addres",
+          "pathName": "pages/address/manage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/address/add",
+          "pathName": "pages/address/add",
+          "query": "",
           "scene": null
         }
       ]

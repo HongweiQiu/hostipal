@@ -24,41 +24,54 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.select-address.data-v-01d1a458 {
+.add.data-v-0635e51d {
   min-height: 100vh;
   background: white;
 }
-.select-address .default.data-v-01d1a458 {
-  background: #386FF0;
-  font-size: 20rpx;
-  color: white;
-  padding: 0 4rpx;
-  font-weight: normal;
-  margin: -0rpx 0 0 10rpx;
-  border-radius: 4rpx;
+.add .form.data-v-0635e51d {
+  height: 89rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-bottom: 1px solid #eee;
 }
-.select-address .sign-address.data-v-01d1a458 {
-  padding: 30rpx 0;
-  margin: 0 30rpx;
+.add .form text.data-v-0635e51d {
+  width: 200rpx;
+  font-weight: bold;
 }
-.select-address .sign-address radio.data-v-01d1a458 {
-  margin-right: 30rpx;
-}
-.select-address .fixed-style.data-v-01d1a458 {
-  position: fixed;
-  bottom: 0rpx;
+.add textarea.data-v-0635e51d {
   width: 100%;
+  height: 180rpx;
   padding: 30rpx 0;
-  background: white;
+  border-bottom: 1px solid #eee;
 }
-.select-address .fixed-style .submit.data-v-01d1a458 {
+.add .fixed.data-v-0635e51d {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  padding: 10rpx 0;
+  width: 100%;
+}
+.add .fixed .custom.data-v-0635e51d {
   width: 630rpx;
-  height: 79rpx;
-  line-height: 79rpx;
-  margin: 0 auto;
-  color: white;
-  text-align: center;
+}
+.add.data-v-0635e51d .u-switch {
+  width: 70rpx;
+  height: 30rpx;
+}
+.add.data-v-0635e51d .u-switch .u-switch__node {
+  width: 38rpx !important;
+  height: 38rpx !important;
+  top: -6rpx;
+  background: #999;
+}
+.add.data-v-0635e51d .u-switch--on .u-switch__node {
   background: #386FF0;
-  border-radius: 39rpx;
+}
+.add.data-v-0635e51d .u-drawer-content {
+  border-radius: 20rpx 20rpx 0 0;
 }
 

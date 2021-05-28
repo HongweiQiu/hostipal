@@ -102,6 +102,9 @@
 .r-15 {
 	border-radius: 30rpx;
 }
+.r-10 {
+	border-radius: 20rpx;
+}
 .r-5 {
 	border-radius: 10rpx;
 }
