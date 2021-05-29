@@ -35,18 +35,21 @@
 				<view class="hidden width center fs-13 bold">{{item.name}}</view>
 			</view>
 		</view>
-		<view class="hot-new flex" @click="newPage">
+		<view class="hot-new flex" @click="newPage" style="overflow-y: hidden;">
 			<view>
 				<image src="../../static/img/new_top.png" mode=""></image>
 			</view>
-			<scroll-view scroll-y="true" :scroll-top="scrollTop" @scrolltolower="test">
-				<view>撒打发第三方收到</view>
-				<view>撒打发第三方收到</view>
-				<view>撒打发第三方收到</view>
-				<view>撒打发第三方收到</view>
+			<scroll-view scroll-y="true" :scroll-top="scrollTop" @scroll="test" class="scroll-view">
+				<view class="fs-12">
+					<view>撒打发第三方收到</view>
+					<view>撒打发第三方收到</view>
+					<view>撒打发第三方收到</view>
+					<view>撒打发第三方收到</view>
+				</view>
 			</scroll-view>
-			</swiper>
+			<u-icon name="arrow-right" color="#999" size="24"></u-icon>
 		</view>
+
 		<!-- 新品推荐 -->
 		<view class="new">
 			<view class="flex-left-right title">
@@ -58,7 +61,7 @@
 					</view>
 				</view>
 
-				<text class="iconfont icon-fanhui t-180"></text>
+				<u-icon name="arrow-right" color="#999" size="24"></u-icon>
 			</view>
 
 			<view class="flex good">
@@ -96,7 +99,6 @@
 		</view>
 		<u-back-top :scroll-top="scrollTop" bottom='100'></u-back-top>
 	</view>
-
 </template>
 
 <script>
@@ -104,13 +106,14 @@
 	const {
 		imgRemote
 	} = app;
-
+	import tonyScroll from '@/components/tony-scroll/tony-scroll.vue'
 	export default {
 		components: {
-
+			tonyScroll
 		},
 		data() {
 			return {
+
 				imgRemote: imgRemote,
 				adList: [],
 				navList: [{
@@ -137,7 +140,8 @@
 
 				],
 				scrollTop: 0,
-				list: [{}]
+				height: 0
+				// list: [{}]
 			}
 		},
 		methods: {
@@ -181,13 +185,25 @@
 					url: '../index/newList'
 				})
 			},
-			test(e){
-				console.log(e)
+			test(e) {
+
+				if (e.detail.scrollHeight - this.height == e.detail.scrollTop) {
+					this.scrollTop = 0;
+				}
 			}
 		},
 		onLoad() {
 
 			this.indexMainAd();
+			
+		},
+		mounted() {
+			const query = uni.createSelectorQuery();
+			query.selectAll('.scroll-view').boundingClientRect(data => {
+				console.log("得到布局位置信息" + JSON.stringify(data));
+				console.log("节点离页面顶部的距离为" + data[0].top);
+				this.height = data[0].height;
+			}).exec();
 			setInterval(() => {
 				this.scrollTop++
 			}, 100)
@@ -247,6 +263,7 @@
 			image {
 				width: 60rpx;
 				height: 60rpx;
+				margin-right: 60rpx;
 			}
 
 			height: 102rpx;

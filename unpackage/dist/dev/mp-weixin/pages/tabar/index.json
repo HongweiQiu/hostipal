@@ -3,7 +3,9 @@
   "usingComponents": {
     "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
     "my-search": "/components/search/index",
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
     "my-recommend": "/components/recommend/index",
-    "u-back-top": "/uview-ui/components/u-back-top/u-back-top"
+    "u-back-top": "/uview-ui/components/u-back-top/u-back-top",
+    "tony-scroll": "/components/tony-scroll/tony-scroll"
   }
 }

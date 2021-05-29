@@ -81,6 +81,7 @@
 .index .hot-new image.data-v-812500c0 {
   width: 60rpx;
   height: 60rpx;
+  margin-right: 60rpx;
 }
 .index .hot-new swiper.data-v-812500c0 {
   height: 100%;
